@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: pranithsinghpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pranithsinghpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: pranithsinghpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: pranithsinghpipelinesjavascriptdocker 
+          image: testreg112.azurecr.io/pranithsinghpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
